@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeroPensado = Math.floor(Math.random()*100 + 1);
+
+        for(tentativa = 1; tentativa <= 4; tentativa++){
+
+            let chute = prompt("Adivinhe um número de 1 a 10");
+            if (chute == numeroPensado){
+                alert("Parabéns, você acertou!" + numeroPensado);
+                break;
+            }else{
+                alert("Você errou! Você tem mais" + (3 - tentativa) + "tentativas.");
+                
+                }
+            }
+        alert("Eu pensei: " + numeroPensado);
+        let continuarJogo = prompt("Quer continuar jogando? Digite 1, se não quiser continuar digite 2");
+        if(continuarJogo == "1"){
+            function reiniciarPrograma() {
+                location.reload();
+            }
+            reiniciarPrograma();
+        }else{
+            alert("Jogo encerrado");
+        }
+
+    </script>
+    
+</body>
+</html>
